@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direktori RDM - KKM Sidayu Gresik</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Neumorphism Design System Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neu: {
+                            base: '#E0E5EC',
+                            primary: '#3D4852',
+                            muted: '#6B7280',
+                            accent: '#6C63FF',
+                            accentLight: '#8B84FF',
+                            success: '#38B2AC',
+                            warning: '#D69E2E'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .shadow-neu-extruded { box-shadow: 9px 9px 16px rgb(163 177 198 / 0.6), -9px -9px 16px rgba(255 255 255 / 0.5); }
+            .shadow-neu-extruded-hover { box-shadow: 12px 12px 20px rgb(163 177 198 / 0.7), -12px -12px 20px rgba(255 255 255 / 0.6); }
+            .shadow-neu-extruded-sm { box-shadow: 5px 5px 10px rgb(163 177 198 / 0.6), -5px -5px 10px rgba(255 255 255 / 0.5); }
+            .shadow-neu-inset { box-shadow: inset 6px 6px 10px rgb(163 177 198 / 0.6), inset -6px -6px 10px rgba(255 255 255 / 0.5); }
+            .shadow-neu-inset-deep { box-shadow: inset 10px 10px 20px rgb(163 177 198 / 0.7), inset -10px -10px 20px rgba(255 255 255 / 0.6); }
+            .shadow-neu-inset-sm { box-shadow: inset 3px 3px 6px rgb(163 177 198 / 0.6), inset -3px -3px 6px rgba(255 255 255 / 0.5); }
+            .rounded-card { border-radius: 32px; }
+            .rounded-base { border-radius: 16px; }
+            .rounded-inner { border-radius: 12px; }
+        }
+
+        body {
+            background-color: #E0E5EC;
+            color: #3D4852;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .neu-transition { transition: all 300ms ease-out; }
+    </style>
+</head>
+<body class="font-body min-h-screen relative overflow-x-hidden pt-28 pb-20 selection:bg-neu-accent selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-neu-base/90 border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                
+                <!-- Logo & Identitas (Klik kembali ke Beranda) -->
+                <a href="index.html" class="flex items-center gap-4 group focus-visible:rounded-full" title="Kembali ke Beranda">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-neu-extruded group-hover:shadow-neu-extruded-hover p-1 neu-transition shrink-0">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJhBXHc0QsTa3gC1XHy6AT92dkXylySUz80vqy7G2EDPoP8ZnNoa3XqKW15bjOUieSVZ9vOHtQf-G-wCzRfPILhasQSO2nBPCvsrnLJ2oVdQQz9cLxFf50D1ahgx-LwFTJ1QJPQIWWSJOTM33-GjIbHUPd11koqWIx697zkwhpXXVHgyb9Og4kcFa4CGs/s400/logo-rdm-madrasah-png.png" alt="Logo Rapor Digital Madrasah" class="w-full h-full object-contain rounded-full">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="font-display font-bold text-sm sm:text-lg text-neu-primary tracking-tight leading-tight group-hover:text-neu-accent transition-colors">
+                            RAPOR DIGITAL MADRASAH
+                        </span>
+                        <span class="font-bold text-[10px] sm:text-xs text-neu-muted uppercase tracking-wider mt-0.5">
+                            KKM Sidayu Gresik
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Tombol Beranda -->
+                <nav class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-base text-neu-primary shadow-neu-extruded hover:shadow-neu-extruded-hover active:shadow-neu-inset-sm font-bold text-sm sm:text-base neu-transition bg-neu-base group">
+                        <i data-lucide="home" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform text-neu-accent"></i>
+                        <span class="hidden sm:inline">Beranda</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: Direktori -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Page Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-4 mt-8">
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-neu-primary tracking-tight">
+                Direktori Portal RDM
+            </h1>
+            <p class="text-neu-muted font-body leading-relaxed text-sm sm:text-base">
+                Pilih lembaga madrasah Anda di bawah ini untuk masuk ke portal Rapor Digital Madrasah (RDM) masing-masing.
+            </p>
+        </div>
+
+        <!-- Section RA -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-accent bg-neu-base">
+                    <i data-lucide="shapes" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl text-neu-primary">Raudlotul Athfal (RA)</h2>
+                    <span class="text-xs font-bold text-neu-muted uppercase">Tingkat Pendidikan Anak Usia Dini</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Data RA -->
+                <a href="https://ramnuislamiyah.rdmkkmsidayu.my.id/" target="_blank" class="group flex items-center gap-4 p-5 rounded-card bg-neu-base shadow-neu-extruded hover:shadow-neu-extruded-hover hover:-translate-y-1 active:shadow-neu-inset-sm neu-transition">
+                    <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-accent shrink-0 group-hover:scale-95 transition-transform">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-display font-bold text-neu-primary group-hover:text-neu-accent transition-colors">
+                        RA RAM NU ISLAMIYAH
+                    </div>
+                </a>
+                <a href="https://ramnu250kanjengsepuh2.rdmkkmsidayu.my.id/" target="_blank" class="group flex items-center gap-4 p-5 rounded-card bg-neu-base shadow-neu-extruded hover:shadow-neu-extruded-hover hover:-translate-y-1 active:shadow-neu-inset-sm neu-transition">
+                    <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-accent shrink-0 group-hover:scale-95 transition-transform">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-display font-bold text-neu-primary group-hover:text-neu-accent transition-colors">
+                        RA RAM NU 250 KANJENG SEPUH II
+                    </div>
+                </a>
+                <a href="https://raalmahiridarululum.rdmkkmsidayu.my.id/" target="_blank" class="group flex items-center gap-4 p-5 rounded-card bg-neu-base shadow-neu-extruded hover:shadow-neu-extruded-hover hover:-translate-y-1 active:shadow-neu-inset-sm neu-transition">
+                    <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-accent shrink-0 group-hover:scale-95 transition-transform">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-display font-bold text-neu-primary group-hover:text-neu-accent transition-colors">
+                        RA AL-MAHIRI DARUL ULUM
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section MI -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-success bg-neu-base">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl text-neu-primary">Madrasah Ibtidaiyah (MI)</h2>
+                    <span class="text-xs font-bold text-neu-muted uppercase">Tingkat Pendidikan Dasar</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="mi-container">
+                <!-- Javascript will inject the 22 MI here -->
+            </div>
+        </div>
+
+        <!-- Section MTs -->
+        <div class="mb-10">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-warning bg-neu-base">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl text-neu-primary">Madrasah Tsanawiyah (MTs)</h2>
+                    <span class="text-xs font-bold text-neu-muted uppercase">Tingkat Pendidikan Menengah Pertama</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Data MTs -->
+                <a href="https://mtsnuruljadid.rdmkkmsidayu.my.id/" target="_blank" class="group flex items-center gap-4 p-5 rounded-card bg-neu-base shadow-neu-extruded hover:shadow-neu-extruded-hover hover:-translate-y-1 active:shadow-neu-inset-sm neu-transition">
+                    <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-warning shrink-0 group-hover:scale-95 transition-transform">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-display font-bold text-neu-primary group-hover:text-neu-warning transition-colors">
+                        MTs. Nurul Jadid
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP POPUP -->
+    <a href="https://wa.me/6285742645266" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-2 py-2 pr-4 bg-neu-base shadow-neu-extruded hover:-translate-y-1 hover:shadow-neu-extruded-hover active:translate-y-0.5 active:shadow-neu-inset-sm rounded-full neu-transition group cursor-pointer border border-white/20">
+        <div class="w-10 h-10 rounded-full shadow-neu-inset-deep flex items-center justify-center text-green-500 bg-neu-base shrink-0">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </div>
+        <span class="text-xs font-bold text-neu-primary tracking-wide transition-all duration-300">
+            Hubungi Kami jika <br/>ditemukan kendala
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Generate MI List Dynamically
+        const miList = [
+            { name: "MIS ISLAMIYAHMIS SAMBIPONDOK", link: "https://miislamiyahsambipondok.rdmkkmsidayu.my.id/" },
+            { name: "MIS ISLAMIYAH SIDORUKUN", link: "https://miislamiyahsidorukun.rdmkkmsidayu.my.id/" },
+            { name: "MIS ISLAMIYAH PENGULU", link: "https://miislamiyahpengulu.rdmkkmsidayu.my.id/" },
+            { name: "MIS MAMBA'UL HISAN", link: "https://mimambaulhisan.rdmkkmsidayu.my.id/" },
+            { name: "MIS NURUL FATAH", link: "https://minurulfatah.rdmkkmsidayu.my.id/" },
+            { name: "MIS KANJENG SEPUH 1", link: "https://mikanjengsepuh1.rdmkkmsidayu.my.id/" },
+            { name: "MIS KANJENG SEPUH 2", link: "https://mikanjengsepuh2.rdmkkmsidayu.my.id/" },
+            { name: "MIS TUHFATUS SHIBYAN", link: "https://mituhfatusshibyan.rdmkkmsidayu.my.id/" },
+            { name: "MIS ASSYAFI`IYAH", link: "https://miassyafiiyah.rdmkkmsidayu.my.id/" },
+            { name: "MIS MAMBAUDDA'WAH", link: "https://mimambauddawah.rdmkkmsidayu.my.id/" },
+            { name: "MIS AL FURQON", link: "https://mialfurqon.rdmkkmsidayu.my.id/" },
+            { name: "MIS MUHAMMADIYAH ", link: "https://mimuhammadiyah.rdmkkmsidayu.my.id/" },
+            { name: "MIS AL-FATAH", link: "https://mialfatah.rdmkkmsidayu.my.id/" },
+            { name: "MIS DAROYISSALAM", link: "https://midaroyissalam.rdmkkmsidayu.my.id/" },
+            { name: "MIS MUTTABIUL HUDA", link: "https://mimuttabiulhuda.rdmkkmsidayu.my.id/" },
+            { name: "MIS AL - FIRDAUS", link: "https://mialfirdaus.rdmkkmsidayu.my.id/" },
+            { name: "MIS DARUL IKHLAS", link: "https://midarulikhlas.rdmkkmsidayu.my.id/" },
+            { name: "MIS NURUL ATHFAL", link: "https://minurulathfal.rdmkkmsidayu.my.id/" },
+            { name: "MIS NURUL HUDA", link: "https://minurulhuda.rdmkkmsidayu.my.id/" },
+            { name: "MIS MIFTAHUL HUDA", link: "https://mimiftahulhuda.rdmkkmsidayu.my.id/" },
+            { name: "MIS NAHDLATUL UMMAH", link: "https://minahdlatulummah.rdmkkmsidayu.my.id/" },
+            { name: "MIS AL KHOLIDIYAH", link: "https://mialkholidiyah.rdmkkmsidayu.my.id/" }
+        ];
+
+        const container = document.getElementById('mi-container');
+        container.innerHTML = miList.map(item => `
+            <a href="${item.link}" target="_blank" class="group flex items-center gap-4 p-5 rounded-card bg-neu-base shadow-neu-extruded hover:shadow-neu-extruded-hover hover:-translate-y-1 active:shadow-neu-inset-sm neu-transition">
+                <div class="w-12 h-12 rounded-full shadow-neu-inset-deep flex items-center justify-center text-neu-success shrink-0 group-hover:scale-95 transition-transform">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <div class="font-display font-bold text-sm sm:text-base text-neu-primary group-hover:text-neu-success transition-colors">
+                    ${item.name}
+                </div>
+            </a>
+        `).join('');
+
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
